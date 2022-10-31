@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600&display=swap');
+@font-face {
+  font-display: swap;
+  font-family: "Graffiti";   /*Can be any text*/
+  src: url("https://res.cloudinary.com/dos8mey8r/raw/upload/v1667230704/shoes/SpriteGraffiti-Regular_avrvx7.ttf") format("truetype")
+}
+
 *{
   padding: 0;
   margin: 0;

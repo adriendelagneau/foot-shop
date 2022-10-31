@@ -7,11 +7,19 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        Graffiti: ["Graffiti"],
+      },
       animation : {
+        'social': 'social 0.2s ease-in-out forwards',
         'rotateStar': 'rotateStar 1.2s linear ',
         'tourniquet': 'tourniquet  10s linear infinite',
       },
       keyframes: {
+        social: {
+          '0%': { transform: 'scale(1)'},
+          '100%': { transform: 'scale(1.2)'}
+        },
         rotateStar: {
           '0%': { transform: 'rotateY(90deg)'},
           '100%': { transform: 'rotateY(0deg)' }

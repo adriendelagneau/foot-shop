@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
+import Link from 'next/link';
 
 
 const Footer = () => {
@@ -15,23 +16,23 @@ const Footer = () => {
            </div>
 
            <div className="w-full flex justify-center content-center gap-[2vw] md:w-1/3">
-                <div className="hover:animate-slurp cursor-pointer">
+                <div className="hover:animate-social cursor-pointer">
                     <Image src={theme === "light" ? "https://res.cloudinary.com/dos8mey8r/image/upload/v1661934715/shoes/facebook_zmebso.png" : "https://res.cloudinary.com/dos8mey8r/image/upload/v1667206837/shoes/facebook_black_tm6fd9.png"}alt="facebook" width={50} height={50} layout="fixed"/>
                 </div>
-                <div className="hover:animate-slurp cursor-pointer ">
+                <div className="hover:animate-social cursor-pointer ">
                     <Image src= { theme === "light" ? "https://res.cloudinary.com/dos8mey8r/image/upload/v1661934728/shoes/twiter_qvjn7o.png"  : "https://res.cloudinary.com/dos8mey8r/image/upload/v1667206837/shoes/twiter_black_xtoule.png"}alt="twiter" width={50} height={50} layout="fixed"/>
                 </div>
-                <div className="hover:animate-slurp cursor-pointer">
-                    <Image src={theme === "light" ? "https://res.cloudinary.com/dos8mey8r/image/upload/v1661934715/shoes/insta_sfsmx0.png" : "https://res.cloudinary.com/dos8mey8r/image/upload/v1667206837/shoes/linkin_black_kf3yqh.png"} alt="instagram" width={50} height={50} layout="fixed"/>
+                <div className="hover:animate-social cursor-pointer">
+                    <Image src={theme === "light" ? "https://res.cloudinary.com/dos8mey8r/image/upload/v1661934715/shoes/insta_sfsmx0.png" : "https://res.cloudinary.com/dos8mey8r/image/upload/v1667206837/shoes/insta_black_bnnwkx.png"} alt="instagram" width={50} height={50} layout="fixed"/>
                 </div>
-                <div className="hover:animate-slurp cursor-pointer">
+                <div className="hover:animate-social cursor-pointer">
                     <Image src={theme === "light" ? "https://res.cloudinary.com/dos8mey8r/image/upload/v1661934720/shoes/linkin_mqgubq.png" : "https://res.cloudinary.com/dos8mey8r/image/upload/v1667206837/shoes/linkin_black_kf3yqh.png"} alt="logo" width={50} height={50} layout="fixed"/>
                 </div>
            </div>
            
            <div className="text-xl text-right hidden md:w-1/3 items-center pl-[10vw] md:flex md:flex-col xl:pl-[20vw] dark:text-black" >
                 <span>@copyright 2022</span>
-                <span className='w-auto'>b166er</span>
+                <span className=' font-Graffiti text-4xl pt-2 cursor-pointer'><Link href="mailto:delagneauadrien@yahoo.fr" target="_blank" rel="noopener noreferrer">b166er</Link></span>
            </div>
 
         </div>
