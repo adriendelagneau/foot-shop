@@ -11,14 +11,24 @@ module.exports = {
         Graffiti: ["Graffiti"],
       },
       animation : {
+        'navbarUp': 'navbarUp 0.4s ease-in-out forwards',
+        'navbarDown': 'navbarDown 0.4s ease-in-out forwards',
         'social': 'social 0.2s ease-in-out forwards',
         'rotateStar': 'rotateStar 1.2s linear ',
         'tourniquet': 'tourniquet  10s linear infinite',
       },
       keyframes: {
+        navbarUp: {
+          '0%': { transform: 'translateY(0px)'},
+          '100%': { transform: 'translateY(-80px)'}
+        },
+        navbarDown: {
+          '0%': { transform: 'translateY(-80px)'},
+          '100%': { transform: 'translateY(0px)'}
+        },
         social: {
           '0%': { transform: 'scale(1)'},
-          '100%': { transform: 'scale(1.2)'}
+          '100%': { transform: 'scale(1.1)'}
         },
         rotateStar: {
           '0%': { transform: 'rotateY(90deg)'},
