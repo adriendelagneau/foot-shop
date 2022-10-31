@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -19,7 +18,7 @@ const Acordeon = () => {
                 </Link>
                 <Link href="/products?category=women" scroll={false} >
                     <div className="img img3">
-                    <p> femme </p>
+                        <p> femme </p>
                     </div>
             </Link>
              
