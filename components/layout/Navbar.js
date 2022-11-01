@@ -6,11 +6,15 @@ import { useSession } from 'next-auth/react';
 import filterSearch from '../../utils/filterSearch';
 import { useTheme } from 'next-themes';
 import { Store } from '../../utils/Store'; 
+import Toggle from '../Toggle';
 
 const Navbar = ({cartOpen, setCartOpen }) => {
+  const {theme, setTheme} = useTheme();
+  
 
 
-    const {theme, setTheme} = useTheme();
+
+
     const [logoUrl, setLogoUrl] = useState("https://res.cloudinary.com/dos8mey8r/image/upload/v1667248641/shoes/logo3_yuc669_z0rlcg_eqjhvo.png")
     const [cartUrl, setCartUrl] = useState("https://res.cloudinary.com/dos8mey8r/image/upload/v1667248641/shoes/cart8_k1irit_1_ca3abf.png")
     const [userUrl, setUserUrl] = useState("https://res.cloudinary.com/dos8mey8r/image/upload/v1667248641/shoes/user_nf6lwe_yz7id7.png")
@@ -99,6 +103,8 @@ const Navbar = ({cartOpen, setCartOpen }) => {
           
 
           <div className='flex justify-end w-1/3 pr-3'>
+
+          <Toggle  />
 
             <div className=" flex items-center content-center  relative cursor-pointer" onClick={() =>  setCartOpen(true)}>
                 <Image src={cartUrl} alt="cart icon" width={40} height={40} layout="fixed"/>
