@@ -45,7 +45,7 @@ body{
   height: 31px;
   width: 80px;
   border-radius: 50px;
-  margin: auto;
+  margin:auto 20px ;
   background-image: linear-gradient(rgb(17, 120, 184), skyblue);
   position: relative;
   cursor: pointer;
@@ -63,7 +63,7 @@ body{
   position: absolute;
   top: 3px;
   left: 5px;
-  box-shadow: 0 0 5px yellow;
+
   z-index: 1;
   transition: all 0.3s ease;
 }
@@ -176,3 +176,4 @@ body{
   -ms-transform: translate(-13px, 0);
   -o-transform: translate(-13px, 0);
 }
+

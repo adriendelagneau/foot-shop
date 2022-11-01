@@ -9,43 +9,18 @@ import { Store } from '../../utils/Store';
 import Toggle from '../Toggle';
 
 const Navbar = ({cartOpen, setCartOpen }) => {
-  const {theme, setTheme} = useTheme();
-  
-
-
-
-
-    const [logoUrl, setLogoUrl] = useState("https://res.cloudinary.com/dos8mey8r/image/upload/v1667248641/shoes/logo3_yuc669_z0rlcg_eqjhvo.png")
-    const [cartUrl, setCartUrl] = useState("https://res.cloudinary.com/dos8mey8r/image/upload/v1667248641/shoes/cart8_k1irit_1_ca3abf.png")
-    const [userUrl, setUserUrl] = useState("https://res.cloudinary.com/dos8mey8r/image/upload/v1667248641/shoes/user_nf6lwe_yz7id7.png")
-    const [adminUrl, setAdminUrl] = useState("https://res.cloudinary.com/dos8mey8r/image/upload/v1667248641/shoes/PikPng.com_request-icon-png_3339857_mgv3au_liy3nn.png" )
-   
-
-    useEffect(() => {
-     if(theme === "light"){
-        setLogoUrl("https://res.cloudinary.com/dos8mey8r/image/upload/v1667248641/shoes/logo3_yuc669_z0rlcg_eqjhvo.png")
-        setCartUrl("https://res.cloudinary.com/dos8mey8r/image/upload/v1667248641/shoes/cart8_k1irit_1_ca3abf.png")
-        setUserUrl("https://res.cloudinary.com/dos8mey8r/image/upload/v1667248641/shoes/user_nf6lwe_yz7id7.png" )
-        setAdminUrl("https://res.cloudinary.com/dos8mey8r/image/upload/v1667248641/shoes/PikPng.com_request-icon-png_3339857_mgv3au_liy3nn.png")
-     }else{
-        setLogoUrl("https://res.cloudinary.com/dos8mey8r/image/upload/v1667248641/shoes/logoSblack_v2u8x0.png")
-        setCartUrl("https://res.cloudinary.com/dos8mey8r/image/upload/v1667248641/shoes/cartBlack_cffisf.png")
-        setUserUrl("https://res.cloudinary.com/dos8mey8r/image/upload/v1667248641/shoes/userBlack_escewg.png")
-        setAdminUrl("https://res.cloudinary.com/dos8mey8r/image/upload/v1667248641/shoes/adminBlack_dv4ohu.png")
-     }
-    }, [theme]);
-
-    const {state } = useContext(Store);
+  const { theme, setTheme } = useTheme();
+  const { state } = useContext(Store);
   const { cart } = state;
   const { data : session } = useSession();
-  const [ isNavbarShow, setIsNavbarShow] = useState(true);
+  const [isNavbarShow, setIsNavbarShow] = useState(true);
   const [cartItemsCount, setCartItemsCount] = useState(0);
   const router = useRouter();
   const [search, setSearch] = useState(router.query.search ?  router.query.search : "");
  
+
   let oldScrollY = 0;
 
-  
   const makeSearch = (e) => {
     e.preventDefault();
     filterSearch({router, search: search ? search.toLowerCase() : 'all'});
@@ -79,19 +54,18 @@ const Navbar = ({cartOpen, setCartOpen }) => {
 
 
     return (
-        <div className={isNavbarShow ? "w-[100%] fixed animate-navbarDown"  : "w-[100%] fixed animate-navbarUp"}  >
-      
+        <div className={isNavbarShow ? "w-[100%] fixed animate-navbarDown z-999"  : "w-[100%] fixed animate-navbarUp z-999"}  >
         <div className='w-[100%] flex h-14 justify-between items-center z-10 bg-black dark:bg-white '>
        
-         <div className='w-1/3 pl-2'>
-            <Link href="/">
-              <div >
-                  <Image className='cursor-pointer' src={logoUrl} alt="logo"  width={90} height={40}  layout="fixed"/>
-                </div>
-            </Link>
-          </div>
+            <div className='flex-1 pl-2'>
+                <Link href="/">
+                  <div >
+                      <Image className='cursor-pointer' src={theme === "dark" ? "https://res.cloudinary.com/dos8mey8r/image/upload/v1667248641/shoes/logoSblack_v2u8x0.png" :  "https://res.cloudinary.com/dos8mey8r/image/upload/v1667321595/shoes/whitelogo_lomvfv.png"} alt="logo"  width={90} height={54}  layout="fixed"/>
+                    </div>
+                </Link>
+              </div>
          
-            <form onSubmit={makeSearch} className="w-1/3 text-center">
+            <form onSubmit={makeSearch} className="flex-1 text-center hidden sm:inline">
               <input 
                 type="text" 
                 placeholder='Search...'
@@ -102,23 +76,20 @@ const Navbar = ({cartOpen, setCartOpen }) => {
             </form>
           
 
-          <div className='flex justify-end w-1/3 pr-3'>
-
-          <Toggle  />
-
+          <div className='flex justify-end flex-2 sm:flex-1 pr-3'>
+            <Toggle  />
             <div className=" flex items-center content-center  relative cursor-pointer" onClick={() =>  setCartOpen(true)}>
-                <Image src={cartUrl} alt="cart icon" width={40} height={40} layout="fixed"/>
+                <Image src={theme === "dark" ? "https://res.cloudinary.com/dos8mey8r/image/upload/v1667248641/shoes/cartBlack_cffisf.png" : "https://res.cloudinary.com/dos8mey8r/image/upload/v1667248641/shoes/cart8_k1irit_1_ca3abf.png"} alt="cart icon" width={40} height={40} layout="fixed"/>
                 {cartItemsCount > 0 && 
                   <div className="bg-red-900 absolute rounded-full w-5 h-5 text-xs text-center top-0.5 left-6 font-bold">{cartItemsCount}</div>
                 }
             </div>  
-
-            <div className='ml-2 pt-2'>
+            <div className='ml-3 pt-1'>
             { session?.user.isAdmin === true 
               ? ( 
                 <Link href="/admin" passHref>
                   <div>
-                    <Image src={adminUrl} alt="admin" width={28} height={28} />
+                    <Image src={theme === "dark" ? "https://res.cloudinary.com/dos8mey8r/image/upload/v1667248641/shoes/adminBlack_dv4ohu.png" : "https://res.cloudinary.com/dos8mey8r/image/upload/v1667248641/shoes/PikPng.com_request-icon-png_3339857_mgv3au_liy3nn.png"} alt="admin" width={28} height={28} />
                   </div>
                 </Link>
               )
@@ -126,21 +97,21 @@ const Navbar = ({cartOpen, setCartOpen }) => {
               ? (
                 <Link href="/profile">
                   <div >
-                    <Image src={userUrl} alt="user" width={28} height={28} layout="fixed"/>
+                    <Image src={theme === "dark" ? "https://res.cloudinary.com/dos8mey8r/image/upload/v1667317761/shoes/PngItem_1300245_rxvkjo.png" : "https://res.cloudinary.com/dos8mey8r/image/upload/v1667317761/shoes/user5_e9edin.png"} alt="user" width={26} height={28} layout="fixed"/>
                   </div>
                 </Link>
               )
               : ( 
                 <Link href="/login" passHref>
                   <div>
-                    <Image src={userUrl} alt="user" width={28} height={28} layout="fixed"/>
+                    <Image src={theme === "dark" ? "https://res.cloudinary.com/dos8mey8r/image/upload/v1667317761/shoes/PngItem_1300245_rxvkjo.png" : "https://res.cloudinary.com/dos8mey8r/image/upload/v1667317761/shoes/user5_e9edin.png"} alt="user" width={26} height={28} layout="fixed"/>
                   </div>
                 </Link>
               )
             }
             </div> 
           </div>
-          </div>
+        </div>
         </div>
     );
 };
