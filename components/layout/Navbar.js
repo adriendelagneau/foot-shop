@@ -54,8 +54,8 @@ const Navbar = ({cartOpen, setCartOpen }) => {
 
 
     return (
-        <div className={isNavbarShow ? "w-[100%] fixed animate-navbarDown z-999"  : "w-[100%] fixed animate-navbarUp z-999"}  >
-        <div className='w-[100%] flex h-14 justify-between items-center z-10 bg-black dark:bg-white '>
+        <div className={isNavbarShow ? "w-[100%] fixed animate-navbarDown z-[999]"  : "w-[100%] fixed animate-navbarUp  z-[999]"}  >
+        <div className='w-[100%] flex h-14 justify-between items-center  bg-black dark:bg-white '>
        
             <div className='flex-1 pl-2'>
                 <Link href="/">
