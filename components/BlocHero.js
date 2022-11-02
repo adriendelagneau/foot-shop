@@ -7,7 +7,7 @@ const BlocHero = () => {
             <div className='flex-1'>
                 <Hero />
             </div>
-            <div className='flex-1'>
+            <div className='flex-1 xl:pb-[30px]'>
                 <Test />
             </div>
         </div>

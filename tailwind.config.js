@@ -11,7 +11,7 @@ module.exports = {
         Graffiti: ["Graffiti"],
       },
       animation : {
-        'rotateCube': 'rotateCube 6s infinte',
+        
         'navbarUp': 'navbarUp 0.4s ease-in-out forwards',
         'navbarDown': 'navbarDown 0.4s ease-in-out forwards',
         'social': 'social 0.2s ease-in-out forwards',
@@ -35,13 +35,7 @@ module.exports = {
           '0%': { transform: 'rotateY(90deg)'},
           '100%': { transform: 'rotateY(0deg)' }
         },
-        rotateCube: {
-          '0%': { transform: 'rotateX(45deg) rotateY(-45deg'},
-          '25%': { transform: 'rotateX(-45deg) rotateY(-45deg'},
-          '50%': { transform: 'rotateX(45deg) rotateY(45deg'},
-          '75%': { transform: 'rotateX(-45deg) rotateY(45deg'},
-          '100%': { transform: 'rotateX(45deg) rotateY(-45deg'},
-        },
+    
         tourniquet: {
           '0%': { transform: 'rotateY(0deg)'},
           '100%': { transform: 'rotateY(360deg)' }

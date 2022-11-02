@@ -18,7 +18,7 @@ const Test = () => {
     return (
         <div className="containerZ dark:bg-white relative text-center mt-14 flex-1 h-auto">
             <button  onClick={() => setOpen(!open)} className="text-black dark:bg-black dark:text-white">click me</button>
-            <div className="boxZ h-[220px] w-[220px] my-[150px] mx-auto ">
+            <div className="boxZ h-[220px] w-[220px] my-[150px] mx-auto animate-rotateCube">
                 <div className={!open ? "faceZ" : "faceZ open"}><Image src="/cam-ferland-YS4vln2TCAE-unsplash.jpg" alt="" width={220} height={220} /></div>
                 <div className={!open ? "faceZ" : "faceZ open"}><Image src="/cam-ferland-YS4vln2TCAE-unsplash.jpg" alt="" width={220} height={220} /></div>
                 <div className={!open ? "faceZ" : "faceZ open"}><Image src="/cam-ferland-YS4vln2TCAE-unsplash.jpg"  alt="" width={220} height={220} /></div>
