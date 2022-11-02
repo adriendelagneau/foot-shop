@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import Acordeon from '../components/Acordeon'
 import BlocHero from '../components/BlocHero'
 import Test from '../components/Test'
 import Video from '../components/Video'
@@ -17,6 +18,8 @@ export default function Home() {
 
  <Video />
  <BlocHero />
+
+ <Acordeon />
 
     </div>
   )
