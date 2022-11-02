@@ -11,6 +11,7 @@ module.exports = {
         Graffiti: ["Graffiti"],
       },
       animation : {
+        'rotateCube': 'rotateCube 6s infinte',
         'navbarUp': 'navbarUp 0.4s ease-in-out forwards',
         'navbarDown': 'navbarDown 0.4s ease-in-out forwards',
         'social': 'social 0.2s ease-in-out forwards',

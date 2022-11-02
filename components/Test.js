@@ -16,15 +16,15 @@ const Test = () => {
     }, [handleResize]);
 
     return (
-        <div className="containerZ">
-            <button onClick={() => setOpen(!open)} >click me</button>
-            <div className="boxZ">
-                <div className={!open ? "faceZ" : "faceZ open"}><Image src="/cam-ferland-YS4vln2TCAE-unsplash.jpg" alt="" width={280} height={280} layout='responsive'/></div>
-                <div className={!open ? "faceZ" : "faceZ open"}><Image src="/WallpaperDog-10799677.jpg" alt="" width={280} height={280} layout='responsive'/></div>
-                <div className={!open ? "faceZ" : "faceZ open"}><Image src="/istockphoto-1264627301-612x612.jpg" alt="" width={280} height={280} layout='responsive'/></div>
-                <div className={!open ? "faceZ" : "faceZ open"}><Image src="/erik-mclean-9c-MHu9fp6M-unsplash.jpg" alt="" width={280} height={280} layout='responsive'/></div>
-                <div className={!open ? "faceZ" : "faceZ open"}><Image src="/lindsay-henwood-7_kRuX1hSXM-unsplash.jpg" alt="" width={280} height={280} layout='responsive'/></div>
-                <div className={!open ? "faceZ" : "faceZ open"}><Image src="/erik-mclean-9c-MHu9fp6M-unsplash.jpg" alt="" width={280} height={280} layout='responsive'/></div>
+        <div className="containerZ dark:bg-white relative text-center mt-14 flex-1 h-auto">
+            <button  onClick={() => setOpen(!open)} className="text-black dark:bg-black dark:text-white">click me</button>
+            <div className="boxZ h-[220px] w-[220px] my-[150px] mx-auto ">
+                <div className={!open ? "faceZ" : "faceZ open"}><Image src="/cam-ferland-YS4vln2TCAE-unsplash.jpg" alt="" width={220} height={220} /></div>
+                <div className={!open ? "faceZ" : "faceZ open"}><Image src="/cam-ferland-YS4vln2TCAE-unsplash.jpg" alt="" width={220} height={220} /></div>
+                <div className={!open ? "faceZ" : "faceZ open"}><Image src="/cam-ferland-YS4vln2TCAE-unsplash.jpg"  alt="" width={220} height={220} /></div>
+                <div className={!open ? "faceZ" : "faceZ open"}><Image src="/cam-ferland-YS4vln2TCAE-unsplash.jpg"  alt="" width={220} height={220} /></div>
+                <div className={!open ? "faceZ" : "faceZ open"}><Image src="/cam-ferland-YS4vln2TCAE-unsplash.jpg"  alt="" width={220} height={220} /></div>
+                <div className={!open ? "faceZ" : "faceZ open"}><Image src="/cam-ferland-YS4vln2TCAE-unsplash.jpg"  alt="" width={220} height={220} /></div>
             </div>
         </div>
     );

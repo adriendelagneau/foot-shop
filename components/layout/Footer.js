@@ -30,7 +30,7 @@ const Footer = () => {
     }, [theme]);
     
     return (
-        <div className="h-[100px] bg-black text-white flex items-center  dark:bg-white ">
+        <div className="h-[100px] bg-black text-white flex items-center   dark:bg-white ">
 
            <div className="px-3 hidden md:inline md:w-1/3">
                 <Image onClick={() => setTheme(theme === "dark" ? "light" : "dark")} src={logoUrl} alt="logo" width={150} height={90} priority/>
