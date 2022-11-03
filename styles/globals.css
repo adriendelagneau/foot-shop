@@ -532,6 +532,9 @@ html {
 
 @media only screen and (hover: none){
   .imgAccordion a:hover{
-    flex: 1;
+flex: 1;
   }
+  .img p{
+
+}
 }
