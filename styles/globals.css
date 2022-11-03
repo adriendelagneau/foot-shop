@@ -455,6 +455,9 @@ html {
 
 
 
+
+
+
   /* acordion */
   .containerCat{
     width: 100%;
@@ -492,9 +495,9 @@ html {
  
 }
 
-.img1{ background-image: url("/paul-volkmer-updW-QUccFE-unsplash.jpg"); }
-.img2{ background-image: url("/janko-ferlic-jjDqU0P0-SM-unsplash.jpg"); }
-.img3{ background-image: url("/lindsay-henwood-7_kRuX1hSXM-unsplash.jpg"); }
+.img1{ background-image: url("https://res.cloudinary.com/dos8mey8r/image/upload/v1667465846/shoes/janko-ferlic-jjDqU0P0-SM-unsplash_x6pqxr.jpg"); }
+.img2{ background-image: url("https://res.cloudinary.com/dos8mey8r/image/upload/v1667465846/shoes/janko-ferlic-jjDqU0P0-SM-unsplash_x6pqxr.jpg"); }
+.img3{ background-image: url("https://res.cloudinary.com/dos8mey8r/image/upload/v1667465846/shoes/janko-ferlic-jjDqU0P0-SM-unsplash_x6pqxr.jpg"); }
 
 .img p{
   position: absolute;

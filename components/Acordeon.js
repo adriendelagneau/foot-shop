@@ -9,6 +9,7 @@ const Acordeon = () => {
             <div className="imgAccordion">
                 <Link href="/products?category=men" scroll={false} >
                     <div className="img img1">
+                     
                         <p> homme </p>
                     </div>
                 </Link>
