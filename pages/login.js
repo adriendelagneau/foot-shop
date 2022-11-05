@@ -30,7 +30,7 @@ const Login = () => {
         password,
       });
       if (result.error) {
-        toast.error(result.error);
+        toast.error(result.error)
       }
     }catch (err) {
       toast.error(getError(err));
