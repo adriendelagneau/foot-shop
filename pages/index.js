@@ -34,7 +34,7 @@ export default function Home(props) {
 
 
 export const getServerSideProps = async ({query}) => {
-  await dbConnect()
+   dbConnect()
   
   const category = query.category || 'all'
   const sort = query.sort || ''
