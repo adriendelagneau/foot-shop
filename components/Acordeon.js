@@ -4,8 +4,8 @@ import React from 'react';
 
 const Acordeon = () => {
     return (
-        <div className='containerCat'>
-        <h3 className='text-5xl ml-10 mb-10'>category</h3>
+        <div className=' 2xl:w-full w-[90%] mx-auto pb-10 '>
+        <h3 className='text-5xl  mb-10 capitalize'>category</h3>
             <div className="imgAccordion">
                 <Link href="/products?category=men" scroll={false} >
                     <div className="img img1">

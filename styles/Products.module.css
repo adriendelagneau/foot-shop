@@ -1,0 +1,22 @@
+.container{
+    grid-template-columns: repeat(auto-fill, 550px);
+    display: grid;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 715px) {
+    .container select{
+        font-size: 16px;
+        margin-right: 0px;
+    }
+  .left{
+    display: flex;
+    flex-direction: column;
+}
+.left select{
+    margin-bottom: 100px;
+   
+}
+  }
+  

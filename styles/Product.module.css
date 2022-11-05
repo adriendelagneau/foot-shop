@@ -1,0 +1,179 @@
+.container { 
+  display: flex;
+  padding-top: 80px;
+  }
+
+.slide:hover {
+  cursor: pointer;
+}
+
+.left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+.title {
+  font-size: 60px;
+  text-transform: capitalize;
+}
+.imgContainer {
+  margin: 2rem auto;
+  position: relative;
+}
+
+.icons {
+  width: 100%;
+  display: flex;
+  justify-content:space-between;
+  margin-top: 5px;
+}
+.rating{
+  display: flex;
+padding-top: 15px;
+  gap: 15px;
+}
+
+.price {
+  font-size: 50px;
+  margin-top: 10px ;
+}
+
+.brand {
+  font-size: 50px;
+  margin-top: 10px ;
+  text-transform: capitalize;
+}
+
+.desc {
+  font-size: 20px;
+  width: 85%;
+  line-height: 25px;
+  margin: 20px 0;
+}
+
+.sizeLabel {
+  font-size:30px;
+  margin:30px 0 30px;
+}
+
+.sizes {
+  margin: 10px 0;  
+  max-width: 700px;
+  min-width: 350px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 100px);
+  font-size: 30px;
+  justify-content: center;
+  color: black;
+  grid-gap: 5px;
+}
+
+.size,
+.selected {
+  text-align: center;
+  border: 1px solid rgb(174, 174, 174);
+  border-radius:0.2rem ;
+  cursor: pointer;
+  -webkit-border-radius:0.2rem ;
+  -moz-border-radius:0.2rem ;
+  -ms-border-radius:0.2rem ;
+  -o-border-radius:0.2rem ;
+  padding:17px;
+  width: 100px;
+  
+  background-color: white;
+  font-size: 1.1rem;
+}
+
+.selected {
+ background-color: black;
+ color: white;
+}
+
+.btn{
+  border: 1px solid rgb(65, 11, 4);
+  background: rgb(0, 0, 0);
+  color: white;
+  cursor: pointer;
+  padding: 15px 25px;
+  font-size: 19px;
+  margin-top: 50px;
+
+  transition: .3s;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  -ms-transition: .3s;
+  -o-transition: .3s;
+}
+
+.sizes button:disabled{
+  background: rgb(240, 240, 240);
+  color: rgb(132, 132, 132);
+  cursor: not-allowed;
+}
+
+.add {
+  width: 80%;
+ height: 80px;
+  text-align: center;
+ }
+
+.quantity {
+  font-size: 1.2rem;
+  width: 80px;
+  height: 40px;
+  }
+  
+
+  @media screen and (max-width: 1480px) {
+    .container {
+      height: auto;
+      text-align: center;
+      flex-direction: column;
+    }
+    .right > p {
+      margin: 30px auto;
+    }
+    .imgContainer {
+      margin: 20px ; 
+    }
+    .slide {
+      margin: 1rem 0.47rem;
+    }
+    .title {
+      margin: 5px;
+    }
+    .titi{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .sizes {
+      width: auto;
+      padding: 0px 20px;
+    }
+    .ingredients {
+      flex-direction: column;
+    }
+    .option {
+      margin: 10px;
+      font-size: 18px;
+    }
+    .price {
+      margin: 30px auto;
+    }
+    .checkbox {
+      width: 25px;
+      height: 25px;
+    }
+    .desc {
+      width: 70%;
+    }
+  }

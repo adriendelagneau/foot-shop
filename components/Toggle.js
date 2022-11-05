@@ -15,7 +15,7 @@ const Toggle = () => {
 
     return (
        
-        <div onClick={() => handleClick()} className={theme === "dark" ? "toggle night" : 'toggle' }>
+        <div onClick={() => handleClick()} className={theme === "dark" ? "toggle" : 'toggle night' }>
         
         <div className="notch"></div>
         <div>
